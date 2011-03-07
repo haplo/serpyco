@@ -143,8 +143,7 @@ if __name__ == '__main__':
             sys.stderr.write(os.linesep)
             error = True
     rename_plan = generate_rename_plan(files_and_dates, prefix, date_as_filename)
-    if dry_run:
-        rename_files(rename_plan, dry_run=dry_run or error)
+    rename_files(rename_plan, dry_run=dry_run or (error and not ignore_errors))
     if error:
         if ignore_errors and not dry_run:
             msg = """
