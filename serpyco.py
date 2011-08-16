@@ -78,7 +78,7 @@ def generate_rename_plan(files_and_dates, prefix, date_as_filename=False):
         name, ext = os.path.splitext(filename)
         path = os.path.dirname(name) or '.' # empty paths raises errors later
         if date_as_filename:
-            date_str = date.strftime('%Y-%M-%d %H.%M.%S')
+            date_str = date.strftime('%Y-%m-%d %H.%M.%S')
             if date == previous_date:   # detect photos with the same date up
                 counter += 1            # to the second, their new filenames
             else:                       # would clash
