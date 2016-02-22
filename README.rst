@@ -2,16 +2,20 @@ Serpyco
 =======
 
 **Serpyco** is a simple EXIF renamer, it takes a bunch of unorganized
-photographs and renames them chronologically according to their EXIF metadata.
+photographs and renames them chronologically according to their EXIF
+metadata. This can be useful in several use cases, such as combining
+photos from different cameras and still have them properly sorted.
 
 The name comes from "Simple Exif Renamer in Python". The -co suffix is only
 there to make it a tribute to Serpico, a character in the Berserk manga series
 (one of the best mangas ever written, definitely recommended!).
 
-Serpyco is licensed under the GNU GPL v3 or any later version. See COPYING or
-http://www.gnu.org/licenses/ for a copy of the license.
+Serpyco is free software licensed under the GNU GPL v3 or any later
+version. See COPYING or http://www.gnu.org/licenses/ for a copy of the
+license.
 
-Go to http://github.com/haplo/serpyco for the latest version of the code.
+Go to http://github.com/haplo/serpyco for the latest version of the
+code or to report any issue you may find.
 
 Usage
 -----
@@ -48,10 +52,13 @@ All errors are printed to the standard error stream, and the renaming plan is
 printed to standard output. To create a text file with the renaming plan
 information, use::
 
-  python serpyco.py files*.jpg > renaming_plan.txt
+  python serpyco.py -n files*.jpg > renaming_plan.txt
+
+Remove the -n switch when you are ready to execute the plan.
 
 Dependencies
 ------------
 
- * Python 2.6 (it may work in 2.5 or previous versions, but it's untested)
+ * Python 2.7, 3.3 or 3.4 (it may work in 2.6 and 3.2 or previous
+   versions, but it's untested and unsupported)
  * pyexiv2 (*python-pyexiv2* package in Debian/Ubuntu systems)
