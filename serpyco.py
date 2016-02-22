@@ -73,7 +73,7 @@ def generate_rename_plan(files_and_dates, prefix, date_as_filename=False):
     files_and_dates.sort(key=operator.itemgetter(1))
     previous_date = None
     counter = 0
-    for i, filename_and_date in enumerate(files_and_dates):
+    for i, filename_and_date in enumerate(files_and_dates, 1):
         filename, date = filename_and_date
         name, ext = os.path.splitext(filename)
         path = os.path.dirname(name) or '.' # empty paths raises errors later
