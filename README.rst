@@ -62,3 +62,8 @@ Dependencies
  * Python 2.7, 3.3 or 3.4 (it may work in 2.6 and 3.2 or previous
    versions, but it's untested and unsupported)
  * pyexiv2 (*python-pyexiv2* package in Debian/Ubuntu systems)
+
+Acknowledgements
+----------------
+
+Test images were borrowed from pyexiv2.
